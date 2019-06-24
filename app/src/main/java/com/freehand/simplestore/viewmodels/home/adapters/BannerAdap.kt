@@ -5,10 +5,14 @@ import android.view.View
 import com.freehand.base_component.core.recycle.BaseRecyclerAdapter
 import com.freehand.simplestore.R
 import com.freehand.simplestore.data.IItem
+import com.freehand.simplestore.data.MockData
 import com.freehand.simplestore.utils.load
 import kotlinx.android.synthetic.main.item_banner.view.*
 
 class BannerAdap : BaseRecyclerAdapter<IItem, BannerAdap.Holder>() {
+    init {
+        setItems(MockData.genData(10))
+    }
     override fun CreateHolder(view: View?, viewType: Int): Holder {
         return Holder(view!!) //To change body of created functions use File | Settings | File Templates.
     }
