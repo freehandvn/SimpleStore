@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.freehand.simplestore.viewmodels.home.HomeVM" />
+    </data>
+
+    <com.freehand.base_component.stateful.StatefulLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:weightSum="6"
+        setStateVM="@{vm}">
+        <FrameLayout
+            android:id="@+id/fm_banner"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"/>
+        <FrameLayout
+            android:id="@+id/fm_list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4"/>
+
+
+    </com.freehand.base_component.stateful.StatefulLinearLayout>
+</layout>
