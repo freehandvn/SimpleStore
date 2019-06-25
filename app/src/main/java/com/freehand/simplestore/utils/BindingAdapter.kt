@@ -4,8 +4,12 @@ import android.databinding.BindingAdapter
 import android.graphics.PorterDuff
 import android.support.v7.widget.PagerSnapHelper
 import android.support.v7.widget.RecyclerView
+import android.view.View
+import android.widget.ImageView
 import android.widget.TextView
 import com.freehand.base_component.core.view_model.BaseViewModel
+import com.freehand.base_component.core.utils.ViewUtils.encreaseTouch
+import com.freehand.base_component.core.utils.ViewUtils.clickableEffect
 
 
 /**
@@ -22,7 +26,19 @@ fun textDrawableTint(text: TextView, color: Int) {
 }
 
 @BindingAdapter("pagerEffect")
-fun pagerEffect(view: RecyclerView,vm:BaseViewModel) {
+fun pagerEffect(view: RecyclerView, vm: BaseViewModel) {
     val effect = PagerSnapHelper()
     effect.attachToRecyclerView(view)
 }
+
+@BindingAdapter("clickEffect")
+fun setActivated(view: View, vm: BaseViewModel) {
+    clickableEffect(view)
+    encreaseTouch(view, 10)
+}
+
+@BindingAdapter("image")
+fun loadImage(view: ImageView, url: String) {
+    view.load(url)
+}
+

@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -10,7 +12,51 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#e7e7e7"
+        android:weightSum="6">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            app:image="@{vm.item.url}"/>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_white_corner"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#121"
+                    android:text="Pumpkin Soup"
+                    android:textStyle="bold"
+                    android:textSize="18sp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:text="@{}"
+                    tools:text="Legendary Moonlight Sculptor – Con Đường Đế Vương là câu chuyện về
+                    kẻ bị thế giới ruồng bỏ, kẻ là nô lệ cho đồng tiền, và đồng thời cũng là Thần Chiến
+                    Tranh huyền thoại của trò chơi MMORPG nổi tiếng Lục Địa Phép Thuật. Trước khi quyết
+                    định nghỉ game để đi làm, chút nỗ lực bán acc để kiếm chút tiền còm lại tạo ra một
+                    điều không tưởng với cậu.Qua một chuỗi các sự kiện tình cờ, nhân vật huyền thoại
+                    của cậu được đấu giá lên tới 3,1 tỉ Won (2,7 triệu $). Vui mừng chưa hết thì cậu
+                    đã sớm bị lũ chủ nợ cho vay nặng lãi tới xâu xé. Nhận ra được khả năng kiếm tiền
+                    từ game, cậu vực dậy và dấn thân vào một thời đại mới mở ra của game, dẫn đầu bởi
+                     trò chơi thực tế ảo Royal Road – Con Đường Đế Vương."
+                    android:paddingBottom="10dp"/>
+            </LinearLayout>
+        </FrameLayout>
 
     </LinearLayout>
 </layout>
